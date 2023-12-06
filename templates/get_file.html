@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <!-- <h3>Download File!</h3>
+    <hr width="100%" color="black" /> -->
+
+    <!-- <form
+      action="http://localhost:5000/openFile"
+      method="POST"
+      enctype="multipart/form-data"
+      class="form-inline">
+      <div class="col text-center">
+        <input type="text" name="file" class="form-control" />
+        <input type="submit" class="btn btn-outline-dark" />
+      </div>
+    </form>
+    <br /><br /> -->
+    <!-- 
+    <hr width="100%" color="black" /> -->
+    <h3>File List</h3>
+    <hr width="100%" color="black" />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-group border border-dark rounded">
+            {% for n in files %}
+            <li class="list-group-item">
+              {{n}}
+              <a href="/uploads?data={{n}}">{{n}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
