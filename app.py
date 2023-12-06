@@ -22,7 +22,7 @@ def upload():  # 파일 업로드 처리
         file_path = os.path.join(UPLOAD_FOLDER, file_name)
         f.save(file_path)
         files = os.listdir("./uploads")
-        return render_template("upload_result.html", name=file_name)
+        return render_template("upload_result.html", name=file_name)   # 업로드 완료 시, "upload_result.html" 렌더링
     
     return render_template("home.html")
 
@@ -39,28 +39,11 @@ def uploaded_file():
     return render_template('open_file.html', data=f)
 
 
-# @app.route("/open_file")
-# def open_file():
-#      f = request.args.get("data")
-#      return render_template("open_file.html", data = f)
 
-
-# 달성 작업: 파일 업로드, 업로드한 파일 목록 나열, 업로드한 파일로 이동할 링크 생성, 링크에서 파일명 출력가능
-# 필요 작업: 링크에서 파일 열기, 파일형식 필터링 추가(초기 구현 후 적용)
-#
-
-
-# @app.route("/showFile", methods = ['GET', 'POST'])
-# def show_files():
-#     if request.method == 'POST':
-#         sw = 0
-#         files = os.listdir("./uploads")
-#         for x in files:
-#             if (x == request.form['file']):
-#                 sw = 1
-#         path = "./uploads/" 
-#         return "file shown"
-
+# "home.html": 홈페이지, 파일 업로드 가능
+# "upload_result.html": 파일 업로드 결과 표시
+# "get_file.html": 업로드한 파일 목록 표시, 파일명 클릭 가능
+# "open_file.html": 파일 이름이 {{data}}인 파일을 브라우저에 렌더링하는 것이 목적, 현재 파일의 이름만 표시 가능한 상태
 
 
 if __name__=='__main__':
