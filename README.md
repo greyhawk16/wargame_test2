@@ -4,4 +4,4 @@
 
 
 
-참고 시나리오: image-storage(https://dreamhack.io/wargame/challenges/38)
+참고 시나리오: image-storage( https://dreamhack.io/wargame/challenges/38 )
